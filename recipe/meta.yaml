@@ -1,18 +1,23 @@
 {% set name = "framel" %}
-{% set version = "8.47.2" %}
+{% set version = "8.48.4" %}
 
 package:
   name: {{ name|lower }}-split
   version: {{ version }}
 
+# source:
+#   url: https://software.igwn.org/lscsoft/source/Fr-{{ version }}.tar.gz
+#   sha256: 6c9aa73a2edaf4d0fc4c4913d35847e345c24093e080d72c81f694c914635f04
 source:
-  url: https://software.igwn.org/lscsoft/source/Fr-{{ version }}.tar.gz
-  sha256: 6c9aa73a2edaf4d0fc4c4913d35847e345c24093e080d72c81f694c914635f04
+  url: https://git.ligo.org/virgo/virgoapp/Fr/-/archive/{{ version }}/Fr-{{ version }}.tar.gz
+  sha256: 0607181a5494ec4962b0ed8f8901e02fce85598274740730fef9889ae989f908
 
 build:
-  error_overdepending: true
-  error_overlinking: true
-  number: 2
+#  error_overdepending: true
+#  error_overlinking: true
+  number: 0
+  ignore_run_exports:
+    - libgcc
 
 requirements:
   build:
