@@ -10,8 +10,7 @@ source:
   sha256: 0607181a5494ec4962b0ed8f8901e02fce85598274740730fef9889ae989f908
 
 build:
-#  error_overdepending: true
-#  error_overlinking: true
+  error_overlinking: true
   number: 0
 
 requirements:
