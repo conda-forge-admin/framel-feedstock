@@ -131,7 +131,7 @@ outputs:
         - ctypesgen
       host:
         - {{ pin_subpackage('libframel', exact=True) }}
-        - libpython  # [win]
+        - distutils-activate-mingw  # [win]
         - numpy
         - python
       run:
