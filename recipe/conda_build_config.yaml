@@ -6,5 +6,6 @@ c_stdlib_version:       # [win]
   - 12                  # [win]
 c_compiler:             # [win]
   - gcc                 # [win]
-c_compiler_version:     # [win]
-  - 15                  # [win]
+# stay on GCC 14 due to stricter -Wincompatible-pointer-types in v15+ that errors the build
+c_compiler_version:     # [win or linux]
+  - 14                  # [win or linux]
